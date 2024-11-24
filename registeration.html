@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Style for the entire body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Style for the form container */
+        form {
+            background-color: #333; /* Dark grey background for the form */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 10px 2px #555; /* Subtle shadow effect */
+            width: 400px; /* Fixed width */
+        }
+
+        /* Style for inputs, select, and textarea */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%; /* Full width of the container */
+            padding: 10px;
+            margin: 10px 0; /* Spacing between elements */
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Style for file input and checkbox */
+        input[type="file"],
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 10px 0;
+        }
+
+        /* Style for submit and reset buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%; /* Half-width for buttons */
+            padding: 10px;
+            margin: 10px 1%; /* Small gap between buttons */
+            border: none;
+            border-radius: 5px;
+            background-color: #555; /* Dark button background */
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Button hover effect */
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #777; /* Lighter grey on hover */
+        }
+
+        /* Headings and labels */
+        h1 {
+            text-align: center;
+            color: #f0f0f0; /* Light grey */
+        }
+
+        label {
+            display: block; /* Ensures proper spacing for labels */
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="register_action.php" method="POST">
+        <h1>Registration Form</h1>
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <!-- Confirm Password -->
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+
+        <!-- Country -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- File Upload -->
+        <label for="profilePic">Upload Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic">
+
+        <!-- Terms and Conditions -->
+        <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the <a href="#" style="color: lightblue;">Terms and Conditions</a>
+        </label>
+
+        <!-- Submit and Reset Buttons -->
+        <div style="text-align: center;">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

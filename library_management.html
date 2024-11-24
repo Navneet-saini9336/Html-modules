@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management Form</title>
+</head>
+<body>
+    <h2>Library Management Form</h2>
+    <form>
+        <!-- Book Details -->
+        <label for="bookTitle">Book Title:</label>                                                           <br>
+        <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter book title" required><br>
+        <br>
+        <label for="authorName">Author Name:</label><br>
+        <input type="text" id="authorName" name="authorName" placeholder="Enter author name" required><br>
+        <br>
+        <label for="isbn">ISBN Number:</label><br>
+        <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN number" required><br>
+<br>
+        <label for="category">Category:</label><br>
+        <select id="category" name="category"><br>
+            <option value="fiction">Fiction</option><br>
+            <option value="non-fiction">Non-Fiction</option><br>
+            <option value="science">Science</option><br>
+            <option value="technology">Technology</option><br>
+            <option value="others">Others</option><br>
+        </select><br>
+<br>
+        <!-- User Details --><br>
+        <label for="userName">User Name:</label><br>
+        <input type="text" id="userName" name="userName" placeholder="Enter user name" required><br>
+<br>
+        <label for="userID">User ID:</label><br>
+        <input type="text" id="userID" name="userID" placeholder="Enter user ID" required><br>
+<br>
+        <!-- Actions --><br>
+        <label for="action">Action:</label><br>
+        <select id="action" name="action"><br>
+            <option value="addBook">Add Book</option><br>
+            <option value="issueBook">Issue Book</option><br>
+            <option value="returnBook">Return Book</option><br>
+        </select><br>
+<br>
+        <label for="issueDate">Issue Date:</label><br>
+        <input type="date" id="issueDate" name="issueDate"><br>
+<br>
+        <label for="returnDate">Return Date:</label><br>
+        <input type="date" id="returnDate" name="returnDate"><br>
+<br>
+        <!-- Submit Button --><br>
+        <input type="submit" value="Submit"><br>
+    </form><br>
+</body><br>
+</html><br>
+<br>
